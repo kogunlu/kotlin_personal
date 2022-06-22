@@ -1,3 +1,12 @@
+/**
+ *
+ *                  For and While Usage
+ *
+ */
+
+
+
+
 fun main() {
 
     // Basit for dongusu icin asagidaki syntax'i kullanabiliriz

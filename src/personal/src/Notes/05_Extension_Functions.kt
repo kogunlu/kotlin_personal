@@ -1,5 +1,3 @@
-import functions.extPlus
-
 fun main() {
 
 
@@ -67,12 +65,12 @@ fun main() {
 
     // tek parametre ile yazdigimiz icin infix yapabildik yoksa infix olmazdi
 
-    infix fun String.ExtPlus(otherString: String): Int {
+    infix fun String.extPlus(otherString: String): Int {
         return this.toInt() + otherString.toInt()
     }
 
     val result: Int = "3" extPlus "5"
-        println(result)
+    println(result)
 
     ("3" extPlus "5") log ("")
 
@@ -84,20 +82,20 @@ fun main() {
     }
 
     val result2: Int = "5".ExtPlus2("10", "15")
-        println(result2)
+    println(result2)
 
 //----------------------------------------------------------------------------------------------------------------------
 
     // baska bir ornek
 
 
-    infix fun Int.ExtTimes(value: Int): Int{
+    infix fun Int.ExtTimes(value: Int): Int {
         return this * value
     }
 
 
     val result3: Int = 15 ExtTimes 3
-        println(result3)
+    println(result3)
 
 
 //----------------------------------------------------------------------------------------------------------------------
@@ -118,11 +116,6 @@ fun main() {
 
 
 //----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
 
 
 //----------------------------------------------------------------------------------------------------------------------

@@ -1,8 +1,8 @@
 fun main() {
 
-/**
- *                       Higher-Order FONKSIYONLAR
- */
+    /**
+     *                       Higher-Order Functions
+     */
 
 
 /*
@@ -35,10 +35,10 @@ fun main() {
 //----------------------------------------------------------------------------------------------------------------------
 
 
-        //          1-  Fonksiyona parametre olarak yazma
+    //          1-  Fonksiyona parametre olarak yazma
 
 
-    fun foo(higherOderFunction: (text: String) -> String){
+    fun foo(higherOderFunction: (text: String) -> String) {
         higherOderFunction("Codemy")
     }
 
@@ -48,8 +48,7 @@ fun main() {
 //----------------------------------------------------------------------------------------------------------------------
 
 
-        //          2-  Fonksiyon cagirilirken yazma
-
+    //          2-  Fonksiyon cagirilirken yazma
 
 
     /*
@@ -61,79 +60,68 @@ fun main() {
 
 //----------------------------------------------------------------------------------------------------------------------
 
-        // 1. yol
-            // Bir degiskene atayarak kullanim
-            // Eger higher order fonksiyonu tek bir parametre aliyorsa, bu parametreyi yazmak zorunda degiliz
-            // Bu durumda otomatik olarak "it" kelimesi ile otomatik bir parametre olusur
+    // 1. yol
+    // Bir degiskene atayarak kullanim
+    // Eger higher order fonksiyonu tek bir parametre aliyorsa, bu parametreyi yazmak zorunda degiliz
+    // Bu durumda otomatik olarak "it" kelimesi ile otomatik bir parametre olusur
 
-        val higherOderFunction = { message: String ->
-                println("Surname: $surName")
-                     "surName : $surName"
-         }
+    val higherOderFunction = { message: String ->
+        println("Surname: $surName")
+        "surName : $surName"
+    }
 
 
 //----------------------------------------------------------------------------------------------------------------------
 
 
-        // 2. yol
-            // Ismi olmayan bir "anonymous fonksiyon" tanimlamalari ile kullanim
+    // 2. yol
+    // Ismi olmayan bir "anonymous fonksiyon" tanimlamalari ile kullanim
 
 
-        val anonymousFunction = fun (surName: String) : String {
-            return "surname: $surName"
-        }
+    val anonymousFunction = fun(surName: String): String {
+        return "surname: $surName"
+    }
 
-            // expression olarak da kullanilir
+    // expression olarak da kullanilir
 
-        val anonymousFunction2 = fun (surname: String) : String = "surname: $surName"
-
-//----------------------------------------------------------------------------------------------------------------------
-
-
-        // 3. yol   ----> BEST PRACTISE
-
-            // Bu kullanim icin gereken sartlar sunlar;
-
-                // 1- Ayni sayida parametre olacak
-                // 2- Parametre tipi ile donus tipi ayni olacak
-
-
-        fun logPrint (message: String, count: Int): String {
-            return "Log: $message count: $count"
-        }
-
-
-        fun foo2(higherOderFunction2: (message: String, count: Int) -> String) {
-            higherOderFunction2("Codemy", 15)
-        }
-
-         foo2(::logPrint)
+    val anonymousFunction2 = fun(surname: String): String = "surname: $surName"
 
 //----------------------------------------------------------------------------------------------------------------------
 
-            // Ornek
+
+    // 3. yol   ----> BEST PRACTISE
+
+    // Bu kullanim icin gereken sartlar sunlar;
+
+    // 1- Ayni sayida parametre olacak
+    // 2- Parametre tipi ile donus tipi ayni olacak
+
+
+    fun logPrint(message: String, count: Int): String {
+        return "Log: $message count: $count"
+    }
+
+
+    fun foo2(higherOderFunction2: (message: String, count: Int) -> String) {
+        higherOderFunction2("Codemy", 15)
+    }
+
+    foo2(::logPrint)
+
+//----------------------------------------------------------------------------------------------------------------------
+
+    // Ornek
 
     fun getItemClickListener(onClick: (String) -> Unit) {
 
         println("Tiklama islemi baslatiliyor")
-            onClick("Login")
+        onClick("Login")
         println("Tiklama islemi bitti")
 
     }
 
 
-
-
-
 //----------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
 
 
 //----------------------------------------------------------------------------------------------------------------------

@@ -27,13 +27,13 @@ fun main() {
 //---------------------------------------------------------------------------------------------------------------------
     //                          Array atamaları birden fazla şekilde yapılabilir.
 
-    val array1 = arrayOf(10,20,30,40,50)
-    val array2 = arrayOf<Any>(10, 20, 30, 'k', "keko", false )
+    val array1 = arrayOf(10, 20, 30, 40, 50)
+    val array2 = arrayOf<Any>(10, 20, 30, 'k', "keko", false)
 
     val array3 = arrayOfNulls<String>(7) // Önce array yaratıldı, atamaları sonra yapılacak.
-        array3[0] = "Monday"
-        array3[1] = "Tuesday"
-        array3[2] = "Wednesday"
+    array3[0] = "Monday"
+    array3[1] = "Tuesday"
+    array3[2] = "Wednesday"
 
     println(array3[0] + " " + array3[2])
     println(array3.indices) // 0..6 olarak, index numaraları dönecek
@@ -49,7 +49,7 @@ fun main() {
     // Eger degiskenin bir ozelligine ihtiyac duyacaksaniz ${} seklinde kullanilir.
 
     println("$numberX + ${value1.length}") // "25 + 5" dönecek
-    print(numberX + value1.length ) // 30 dönecek
+    print(numberX + value1.length) // 30 dönecek
 
 
 //---------------------------------------------------------------------------------------------------------------------
@@ -100,13 +100,13 @@ fun main() {
 
 
 //----------------------------------------------------------------------------------------------------------------------
-    val stepedNumbers = 1..100 step(2)
+    val stepedNumbers = 1..100 step (2)
     val stepedNumbers2 = 1..100 step 3
 
     val reversedStepedNumbers = 100 downTo 1 step 2
     val reversedStepedNumbers2 = 100.downTo(1) step (3)
 
-    reversedStepedNumbers2.forEach{print(" $it")} // ( " " + it ) ---> şeklinde de yazılabiliyor
+    reversedStepedNumbers2.forEach { print(" $it") } // ( " " + it ) ---> şeklinde de yazılabiliyor
 
 //----------------------------------------------------------------------------------------------------------------------
     val numberList = 1 until 100
@@ -123,8 +123,8 @@ fun main() {
     val number5 = null // IDE değişeni nullable yapmadan null değer atadığımız için bu değeri nothing olarak anlar
 
 //----------------------------------------------------------------------------------------------------------------------
-   val number12 = readLine()!!.toInt()
-   val number14 = readLine()!!.toInt()
+    val number12 = readLine()!!.toInt()
+    val number14 = readLine()!!.toInt()
 
 // nullable bir değişkenin methodlarını kullanacaksak bu ifadenin null olursa programın crash olması için !! verilir
 // Kotlin Null Pointer Exception ---> bu durumda oluşan duruma verilen ad
@@ -140,7 +140,6 @@ fun main() {
 
     println(result1)
     println(result2)
-
 
 
 }
