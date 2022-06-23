@@ -58,6 +58,12 @@ class BankAccount() {
 
 }
 
+// Yukaridaki balance ve debt degiskenlerinin urettigi essembly kodlari ayni, ikisi de java karsiligi private olarak uretiliyor
+// Public olan degiskenin get() ve set() fonksiyonlari java karsiliginda yazilmis oluyor
+// Private da get ve set arka planda yazilmamis oluyor
+// Bu yuzden arka plandaki gercek (essembly) kodlara bu nedenle erisemiyoruz
+// Bu nedenle kotlindeki tanimladigimiz degiskenlere field degil property diyoruz
+
 
 //----------------------------------------------------------------------------------------------------------------------
 

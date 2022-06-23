@@ -3,7 +3,7 @@ package personal.src
 
 /**
  *
- *                      CLASSES
+ *                      CLASSES / Encapsulation
  *                      (Basics)
  */
 
@@ -58,7 +58,7 @@ class Foo() {
 
     private val name: String = "Kuday"
     // private degiskene erismek icin public fonksiyon yazıyoruz, disaridan bu fonksiyonu cagirmamiz gerekir.
-    // Bune "encapsulation" diyoruz
+    // Buna "encapsulation" diyoruz
 
     public fun getName(): String {
         return name
@@ -80,7 +80,6 @@ fun main() {
 
 
 //----------------------------------------------------------------------------------------------------------------------
-
 
 
 //----------------------------------------------------------------------------------------------------------------------
