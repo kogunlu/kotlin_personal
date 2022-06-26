@@ -60,8 +60,8 @@ open class Shape(val name: String) {                // open goruyoruz yani paren
 
 class Rectangle(name: String) : Shape(name, "Red") {
     // miras almak icin : kullaniyoruz.
-    // Miras aliyorsak miras alinacak min. 1 constructor almamiz gerekiyor bknz: name
-    // class Rectangle(name: String) : Shape(name) seklinde sadece name de olabilir.
+    // Miras aliyorsak miras alinacak min. 1 constructor almamiz gerekiyor.
+    // Ya primary constructor ya da secondary constructor almamiz gerekli
 
     override fun drawShape() {
         // drawShape()
@@ -76,6 +76,9 @@ class Rectangle(name: String) : Shape(name, "Red") {
         drawShape()
         mColor
         mEdgeCount
+
+        this.drawShape()      // -----> this kullanimi bu classi isaret eder
+        super.drawShape()    // ----> super kullanimi bu class'taki degil, ust siniftaki fonksiyonu calistirir
     }
 
     override var mEdgeCount: Int                    // override edebilmek icin degisken ya da fonksiyonun open olmasi gerekiyor.
