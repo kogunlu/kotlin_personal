@@ -2,70 +2,70 @@ package personal.src.Exercises
 
 import kotlin.math.roundToInt
 
-abstract class productCategories {
+abstract class ProductCategories {
 
-    abstract val VatRate: Double
+    abstract val vatRate: Double
 }
 
-abstract class primaryNeeds : productCategories()
+abstract class PrimaryNeeds : ProductCategories()
 
-abstract class secondaryNeeds : productCategories()
+abstract class SecondaryNeeds : ProductCategories()
 
-abstract class luxuryProducts : productCategories()
+abstract class LuxuryProducts : ProductCategories()
 
-open class breadCategory(val price: Double) : primaryNeeds() {
+open class BreadCategory(val price: Double) : PrimaryNeeds() {
 
-    final override val VatRate: Double = 0.08
-    val vat: Double = price * VatRate
-
-}
-
-open class milkCategory(val price: Double) : primaryNeeds() {
-    override val VatRate: Double = 0.08
-    val vat: Double = price * VatRate
+    final override val vatRate: Double = 0.08
+    val vat: Double = price * vatRate
 
 }
 
-open class snacksCategory(val price: Double) : secondaryNeeds() {
-    override val VatRate: Double = 0.18
-    val vat: Double = price * VatRate
+open class MilkCategory(val price: Double) : PrimaryNeeds() {
+    final override val vatRate: Double = 0.08
+    val vat: Double = price * vatRate
 
 }
 
-open class bevarageCategory(val price: Double) : secondaryNeeds() {
-    override val VatRate: Double = 0.18
-    val vat: Double = price * VatRate
+open class SnacksCategory(val price: Double) : SecondaryNeeds() {
+    final override val vatRate: Double = 0.18
+    val vat: Double = price * vatRate
 
 }
 
-open class tobaccoProducts(val price: Double) : luxuryProducts() {
-    override val VatRate: Double = 0.28
-    val vat: Double = price * VatRate
+open class BevarageCategory(val price: Double) : SecondaryNeeds() {
+    final override val vatRate: Double = 0.18
+    val vat: Double = price * vatRate
 
 }
 
-open class technologyCategory(val price: Double) : luxuryProducts() {
-    override val VatRate: Double = 0.28
-    val vat: Double = price * VatRate
+open class TobaccoProducts(val price: Double) : LuxuryProducts() {
+    final override val vatRate: Double = 0.28
+    val vat: Double = price * vatRate
+
+}
+
+open class TechnologyCategory(val price: Double) : LuxuryProducts() {
+    final override val vatRate: Double = 0.28
+    val vat: Double = price * vatRate
 
 }
 
 
 fun main() {
 
-    val bread = breadCategory(3.0)
+    val bread = BreadCategory(3.0)
 
-    val bagel = breadCategory(4.5)
+    val bagel = BreadCategory(4.5)
 
-    val milk = milkCategory(15.0)
+    val milk = MilkCategory(15.0)
 
-    val chips = snacksCategory(12.5)
+    val chips = SnacksCategory(12.5)
 
-    val xphone13 = technologyCategory(850.0)
+    val xphone13 = TechnologyCategory(850.0)
 
 
     val totalPrice = xphone13.price + chips.price + milk.price + bread.price + bagel.price
-    val totalVatAmount = xphone13.vat + chips.vat + bread.vat + bagel.vat
+    val totalVatAmount = xphone13.vat + chips.vat + bread.vat + bagel.vat + milk.vat
     val grandTotal = totalPrice + totalVatAmount
 
     println("Total amount before VAT: ${totalPrice.roundToInt()} TL")
