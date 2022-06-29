@@ -17,6 +17,7 @@ Ozetle bir parent class'in ozelliklerini (fonksiyon ya da degisken) alt siniflar
 Erisim duzenleyiciler;
 open --> miras alinacak sinifin open olmasi gerekiyor. ( Javada tum siniflar zaten open )
 final --> Kotlin'de default olarak siniflar final, yani miras alinamaz.
+internal --> Yalnizca alt siniflarin erisebildigi tip
 
 
 
