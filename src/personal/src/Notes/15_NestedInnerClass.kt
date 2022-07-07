@@ -55,7 +55,7 @@ class Outer {
         fun printName() {
             //name
             //surname
-            //age               --> ust siniftakilere erisemez: nestedClass
+            //age               --> ustteki siniftakilere erisemez: nestedClass
         }
     }
 }
