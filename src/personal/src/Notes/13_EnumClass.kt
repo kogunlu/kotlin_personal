@@ -19,7 +19,7 @@ Opsiyonlarin tamamaminin neler oldugunu rahatca gorebilmemizi saglar
 abstract, openi inner, sealed olamazlar
 yapisi geregi zaten final'dir. Final keyword'u kullanmak redundant uyarisi verir
 
-ozunde class olduklari icin, constructor kullanabilirler ve bu constructor icersiinde veri tutabilirler
+ozunde class olduklari icin, constructor kullanabilirler ve bu constructor icersinde veri tutabilirler
 java karsiliginda bu enum sabitleri static final class'lar seklinde tutulurlar
     bu sayede, kullanirken bu sabitlerin nesnesini olusturmak zorunda kalmayiz.
 

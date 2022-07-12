@@ -63,7 +63,7 @@ Bizim nesne olustururken gordugumuz sey aslinda cost. icindeki degiskenin kendis
 
 inline class'lar icinde propoerty tanimlanmasina izin verilir. Ancak bu propert'nin backing field'i olamaz.
 
-Inline class2lar herhangi bir interface'i implement edebilirler, bir baska class'i miras alamazlar.
+Inline class'lar herhangi bir interface'i implement edebilirler, bir baska class'i miras alamazlar.
 
 inline class'lar miras alinamaz. Cunku default olarak final'lardir ve degistirilemezler
 Open keyword'uyle birlikte kullanilamaz. Final keyword'u vermek de dedundant uyarisi verir

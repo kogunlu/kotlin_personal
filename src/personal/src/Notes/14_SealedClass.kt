@@ -85,10 +85,10 @@ fun handle(response: Response) {
     }
 }
 
-// bu yanlis bir kullanimdir, enum kullanmamiz gerekiyor
-// sadece obje ekliyor, class eklemiyorsak enum kullanalim
 
 //----------------------------------------------------------------------------------------------------------------------
+// bu yanlis bir kullanimdir, enum kullanmamiz gerekiyor
+// sadece obje ekliyor, class eklemiyorsak enum kullanalim
 
 
 sealed class PaymentOption {

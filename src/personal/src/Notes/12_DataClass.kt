@@ -35,7 +35,7 @@ equals, hashCode, toString, copy, componentN fonksiyonlari arka planda default o
 
 Yukaridaki fonksiyonlardan biri override edilirse, oto generate edilen hali yazilmaz
 
-Yukaridaki fonksiyonlar sadece promary const. icerisindeki degiskenlerle calisir
+Yukaridaki fonksiyonlar sadece primary const. icerisindeki degiskenlerle calisir
 
 componentN fonksiyonlari sebebiyle destructturing declaration olarak data class'lar set edilebiliyor.
     --
